@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: prondzyn/hello-world-docker-action@v4
+      uses: prondzyn/hello-world-docker-action@master
       with:
         who-to-greet: 'Peter of Thorn'
         username: ${{ secrets.USERNAME_55 }}
