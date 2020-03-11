@@ -7,9 +7,11 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: prondzyn/hello-world-docker-action@v2
+      uses: prondzyn/hello-world-docker-action@v3
       with:
         who-to-greet: 'Peter of Thorn'
+        username: ${{ secrets.USERNAME_55 }}
+        password: ${{ secrets.PASSWORD_55 }}
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
