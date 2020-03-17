@@ -13,4 +13,4 @@ jobs:
         access-token: ${{ secrets.CY_RATING_CHECK_ACTION_ACCESS_TOKEN }}
         secret-token: ${{ secrets.CY_RATING_CHECK_ACTION_SECRET_TOKEN }}
     - name: print cyRating value step
-      run: echo "Found cyRating is ${{ steps.hello.outputs.time }}"
+      run: echo "Found cyRating is ${{ steps.cyRating-check.outputs.cy-rating }}"
