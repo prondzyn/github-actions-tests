@@ -1,5 +1,5 @@
-on: [push]
-###
+on:
+  - push
 jobs:
   cyRating_check_job:
     runs-on: ubuntu-latest
@@ -9,7 +9,7 @@ jobs:
       id: cyRating-check
       uses: cyr3con-ai/cyRating-check-action@master
       with:
-        cve: CVE-2019-17549
+        cve: CVE-2819-17549
         access-token: ${{ secrets.CY_RATING_CHECK_ACTION_ACCESS_TOKEN }}
         secret-token: ${{ secrets.CY_RATING_CHECK_ACTION_SECRET_TOKEN }}
     - name: print cyRating value step
