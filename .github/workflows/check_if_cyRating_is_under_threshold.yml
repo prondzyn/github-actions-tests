@@ -1,4 +1,4 @@
-name: Check if cyRating value is under specified threshold
+name: Check if cyRating is under threshold
 
 on: push
 
