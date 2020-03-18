@@ -1,5 +1,7 @@
-on:
-  - push
+name: Print cyRating value for given CVE
+
+on: push
+
 jobs:
   cyRating_check_job:
     runs-on: ubuntu-latest

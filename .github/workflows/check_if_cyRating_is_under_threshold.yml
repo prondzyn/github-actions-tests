@@ -1,5 +1,7 @@
-on:
-  - push
+name: Check if cyRating value is under specified threshold
+
+on: push
+
 jobs:
   cyRating_check_job:
     runs-on: ubuntu-latest
