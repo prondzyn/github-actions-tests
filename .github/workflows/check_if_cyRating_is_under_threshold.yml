@@ -14,6 +14,6 @@ jobs:
         access-token: ${{ secrets.CY_RATING_CHECK_ACTION_ACCESS_TOKEN }}
         secret-token: ${{ secrets.CY_RATING_CHECK_ACTION_SECRET_TOKEN }}
         cve: CVE-2019-17549
-    - name: fail if cyRating is greater or equals 7
-      if: steps.cyRating-check.outputs.cy-rating >= 7
+    - name: fail if cyRating is greater or equals 20
+      if: steps.cyRating-check.outputs.cy-rating >= 20
       run: exit 1
