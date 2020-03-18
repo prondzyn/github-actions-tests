@@ -9,8 +9,11 @@ jobs:
       id: cyRating-check
       uses: cyr3con-ai/cyRating-check-action@master
       with:
-        cve: CVE-2819-17549
+        cve: CVE-2019-17549
         access-token: ${{ secrets.CY_RATING_CHECK_ACTION_ACCESS_TOKEN }}
         secret-token: ${{ secrets.CY_RATING_CHECK_ACTION_SECRET_TOKEN }}
     - name: print cyRating value step
       run: echo "Found cyRating is ${{ steps.cyRating-check.outputs.cy-rating }}"
+    - name: check cyRating threshold
+      if: steps.cyRating-check.outputs.cy-rating > 7
+      run: exit 1
