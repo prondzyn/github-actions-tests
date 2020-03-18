@@ -15,5 +15,5 @@ jobs:
     - name: print cyRating value step
       run: echo "Found cyRating is ${{ steps.cyRating-check.outputs.cy-rating }}"
     - name: check cyRating threshold
-      if: steps.cyRating-check.outputs.cy-rating > 7
+      if: steps.cyRating-check.outputs.cy-rating < 7
       run: exit 1
