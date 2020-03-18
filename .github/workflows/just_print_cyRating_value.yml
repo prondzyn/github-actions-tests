@@ -14,6 +14,3 @@ jobs:
         cve: CVE-2019-17549
     - name: print cyRating value step
       run: echo "Found cyRating is ${{ steps.cyRating-check.outputs.cy-rating }}"
-    - name: fail if cyRating is greater or equals 7
-      if: steps.cyRating-check.outputs.cy-rating >= 7
-      run: exit 1
