@@ -14,6 +14,6 @@ jobs:
         secret-token: ${{ secrets.CY_RATING_CHECK_ACTION_SECRET_TOKEN }}
     - name: print cyRating value step
       run: echo "Found cyRating is ${{ steps.cyRating-check.outputs.cy-rating }}"
-    - name: check cyRating threshold
-      if: steps.cyRating-check.outputs.cy-rating < 7
+    - name: fail if cyRating is greater or equals 7
+      if: steps.cyRating-check.outputs.cy-rating >= 7
       run: exit 1
